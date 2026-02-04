@@ -1,0 +1,17 @@
+filename = input("Enter filename: ")
+
+while True:
+    print("\n1.Write  2.Read  3.Exit")
+    choice = input("Choose: ")
+
+    if choice == "1":
+        text = input("Enter text: ")
+        with open(filename, "a") as f:
+            f.write(text + "\n")
+    elif choice == "2":
+        with open(filename, "r") as f:
+            print(f.read())
+    elif choice == "3":
+        break
+    else:
+        print("Invalid choice")
